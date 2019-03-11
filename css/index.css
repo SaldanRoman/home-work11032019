@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css?family=Play:400,700|Righteous');
+
+:root {
+    font-family: 'Play', sans-serif;
+}
+
+h2{
+	text-align: center;
+	font-size: 1.2rem;
+	margin-top: 50px;
+}
+
+h3{
+	
+	font-size: 1.1rem;
+}
+
+
+body {
+    max-width: 980px;
+    margin: auto;
+
+}
+
+.logo img {
+	padding: 10px;
+	width: 60px;
+}
+
+.basket img {
+	width: 48px;
+	padding-top:14px;
+	padding-right:5px;
+	
+}
+
+header h1{
+	padding-top: 13px;
+	font-size: 1.5rem;
+}
+
+header {
+	display: flex;
+	flex-wrap:wrap;
+	
+}
+
+
+header .logo{
+	order: 1;
+	flex-basis: 50%;
+	width: 50%;
+	background-color: #2e2e2e;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+header .basket{
+	order: 2;
+	flex-basis: 50%;
+	width: 50%;
+	background-color: #2e2e2e;
+	cursor: pointer;
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-start;
+}
+
+header .basketBayN{
+	margin-top: 12px;
+	color: white;
+	font-size: 1.2rem;
+}
+
+
+header .header-name{
+	text-align: center;
+	color: black;
+	order: 3;
+	flex-basis: 100%;
+}
+
+
+nav ul{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	
+}
+
+nav li {
+    list-style-type: none;
+	margin: 10px;
+}
+
+nav ul a{
+	text-decoration: none;
+	color: black;
+	
+}
+
+nav ul a:hover{
+	text-decoration: underline;
+	transition-duration: 0.4s;
+
+}
+
+
+.slider{
+	width: 100%;
+   
+}
+
+.slider img{
+	width: 100%;
+	height: auto;
+}
+
+
+
+.slider-name,.slider-name h2{
+
+	background-color: #ffffff;
+	flex-basis: 100%;
+	padding-top: 10px;
+}
+
+
+@media (min-width: 480px) {
+	header{
+	flex-wrap: nowrap;
+	}
+	header .header-name{
+		order: 2;
+		flex-basis: 75%;
+		background-color: #2e2e2e;
+		color: white;
+		text-align: left;
+	}	
+	header .basket{
+		order: 3;
+		flex-basis: 15%
+	}
+	header .logo{
+		order: 1;
+		flex-basis: 10%
+	}
+	nav ul{
+	display: flex;
+	justify-content:space-around;
+	flex-direction: row;
+	
+	}
+	
+			
+}
+
+.product-card {
+    
+    padding: 10px;
+}
+
+.product-card img {
+    display: block;
+    width: 100%;
+}
+
+.product-card .button-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.product-list {
+    display: grid;
+    grid-gap: 15px;
+}
+
+@media (min-width: 480px) {
+    .product-list {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.button {
+
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: white; 
+    color: black; 
+    border: 2px solid #2e2e2e;
+}
+
+.button:hover {
+    background-color: #2e2e2e;
+    color: white;
+}
+
+
+.footer-form{
+	max-width: 500px;
+	margin: 0 auto;
+}
+
+.footer-form form label{
+	width: 100%;
+    display: grid;
+    text-align: center
+	
+} 
+
+.form-button{
+	display: flex;
+    justify-content: center;
+	
+}
+
+.form-button input{
+	color: white;
+    padding: 14px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: white; 
+    color: black; 
+    border: 2px solid #2e2e2e;
+	
+}
+
+.form-button input:hover {
+    background-color: #2e2e2e;
+    color: white;
+}
+
+
+footer{
+	margin-top: 40px;
+	padding: 10px;
+	background-color: #2e2e2e;
+	color: white;
+	display: grid;
+    grid-gap: 15px;
+		
+		
+}
+
+footer .contacts p{
+	text-align: center;
+	
+}
+
+footer .social-network img{
+	width: 48px;
+	display: block;
+	margin: 0 auto;
+	border-radius: 50%;
+}
+
+.social-network a img:hover{
+	box-shadow: 0 0 5px 5px #ffffff;
+	transition-duration: 0.3s;
+
+} 
+
+
+
+footer .map img{
+	display: block;
+   	width: 100%;
+}
+
+footer .social-network{
+	display: grid;
+    grid-gap: 5px;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+}
+
+footer .social-network a{
+	grid-row-start: 2;
+	
+}
+
+@media (min-width: 480px) {
+	.footer-form form label{
+	    grid-template-columns: 1fr 3fr;
+    
+	} 
+	
+	.form-button{
+    justify-content: flex-end;
+	
+}
+	
+
+	footer .contacts {
+		display:inline-block;
+		margin: 0 auto;
+		vertical-align: center;
+	}
+	
+	footer .contacts p{
+		text-align: left;
+	}
+	
+    footer {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
